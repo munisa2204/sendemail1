@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Salom Xush kelibsiz</p>
+{% if user.is_authenticated %}
+    <p>Siz Tizim Ichidasiz!</p>
+{% else %}
+    <p>Siz tizim ichida Emassiz! Quyidagi Havolalardan Foydalaning!</p>
+    <p>Akkauntim bor </p><a href="{% url 'login' %}">Tizimga kirish</a>
+    <p>Akkauntingiz yo'qmi </p><a href="{% url 'register' %}">Ro'yxatdan o'tish</a>
+{% endif %}
+
+</body>
+</html>
